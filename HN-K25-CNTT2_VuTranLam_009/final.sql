@@ -123,7 +123,7 @@ FROM employees e
 JOIN work_assignments wa ON wa.employee_id = e.employee_id
 JOIN projects p ON p.project_id = wa.project_id
 JOIN employee_details ed ON ed.employee_id = e.employee_id
-WHERE ed.working_status = 'Active' AND p.budget > 40000000; 
+WHERE ed.working_status = 'Active' AND p.budget < 40000000; 
 
 -- 5.1: Tạo một chỉ mục (index) tên idx_assignment_dates trên bảng Work_Assignments dựa trên hai cột start_date và completed_date nhằm tối ưu truy vấn.
 CREATE INDEX idx_assignment_dates ON Work_Assignments(start_date, completed_date );
