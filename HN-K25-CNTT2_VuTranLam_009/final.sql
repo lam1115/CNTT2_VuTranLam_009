@@ -101,7 +101,7 @@ WHERE email LIKE '%@gmail.com';
 SELECT employee_id, full_name, salary
 FROM employees
 ORDER BY salary DESC
-LIMIT 3 OFFSET 2;
+LIMIT 3 OFFSET 1;
 
 -- 4.1: Liệt kê các thông tin phân công gồm mã phân công, tên nhân viên, tên dự án, ngày bắt đầu, hạn hoàn thành, với dữ liệu được lấy từ các bảng liên quan và chỉ hiển thị các công việc chưa hoàn thành (completed_date IS NULL).
 SELECT DISTINCT wa.assignment_id, e.full_name, p.project_name, wa.start_date, wa.deadline
